@@ -1,0 +1,23 @@
+<h2>Create new product! Using reactive driven approach</h2>
+
+<form (ngSubmit)='createProduct()' [formGroup]="userForm">
+    <div>
+        <label for='id'>Id</label>
+        <input id='id' type="number" formControlName="id">
+    </div>
+
+    <div>
+        <label for='name'>Name</label>
+        <input id='name' type="text"  formControlName="name"/>
+    </div>
+
+    <div>
+        <label for='price' Price>Price</label>
+        <input id='price' formControlName='price' type="number"/>
+    </div>
+
+    <div *ngIf="userForm.valid ">
+        <input type="submit" />
+    </div>
+
+</form>

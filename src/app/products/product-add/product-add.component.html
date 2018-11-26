@@ -1,0 +1,23 @@
+<h2>Create new product! Using template driven approach</h2>
+
+<form (ngSubmit)='createProduct(userForm.value)' #userForm="ngForm">
+    <div>
+        <label for='id'>Id</label>
+        <input id='id' type="number" name="id" ngModel required>
+    </div>
+
+    <div>
+        <label for='name'>Name</label>
+        <input id='name' type="text"  name="name" ngModel required minlength="3"/>
+    </div>
+
+    <div>
+        <label for='price' Price>Price</label>
+        <input id='price' name='price' type="number" ngModel required />
+    </div>
+
+    <div *ngIf="userForm.valid ">
+        <input type="submit" />
+    </div>
+
+</form>
